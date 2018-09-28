@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var getFirstIndexOf_1 = require("../../no_modify/get/indexes/getFirstIndexOf");
+var getFirstIndexOf_1 = require("@writetome51/array-get-indexes-basic/getFirstIndexOf");
 var ifIndexNotNegative_getActionResult_1 = require("@writetome51/array-and-index-validation/ifIndexNotNegative_getActionResult");
-var replaceAt_replaceAdjacentAt_1 = require("./array-modifiers-that-return-void-basic/replaceAt_replaceAdjacentAt");
+var replaceAt_replaceAdjacentAt_1 = require("@writetome51/array-insert-replace-basic/replaceAt_replaceAdjacentAt");
 // Won't work if value is object.
 function replaceFirstOf(value, newValue, array) {
     var index = getFirstIndexOf_1.getFirstIndexOf(value, array);

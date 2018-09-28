@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var arrayHas_1 = require("../../no_modify/return_boolean/arrayHas");
+var arrayHas_1 = require("@writetome51/array-analysis-basic/arrayHas");
 var replaceFirstOf_replaceFirstOfEach_1 = require("./replaceFirstOf_replaceFirstOfEach");
 // value cannot be object.
 function replaceAllOf(value, newValue, array) {

@@ -13,14 +13,10 @@
   "author": "Steve Thompson",
   "license": "MIT",
   "devDependencies": {},
-
   "dependencies": {
-    "basic-data-handling": "latest",
     "@writetome51/array-and-index-validation": "latest",
-    "@writetome51/array-get-indexes":"latest",
-    "@writetome51/array-non-modifying-getters-basic": "latest",
-    "@writetome51/arrays-match": "latest",
-    "@writetome51/array-get-and-removers-basic": "latest",
-    "@writetome51/adjacent-to-value-info-interface": "latest"
+    "@writetome51/array-get-indexes-basic": "latest",
+    "@writetome51/array-insert-replace-basic": "latest",
+    "@writetome51/array-analysis-basic": "latest"
   }
 }
