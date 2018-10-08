@@ -1,7 +1,7 @@
 import { getFirstIndexOf } from '@writetome51/array-get-indexes-basic/getFirstIndexOf';
 import { ifIndexNotNegative_getActionResult }
 	from '@writetome51/array-and-index-validation/ifIndexNotNegative_getActionResult';
-import { replaceAt } from '@writetome51/array-insert-replace-basic/replaceAt_replaceAdjacentAt';
+import { replaceAt } from '@writetome51/array-replace-at/replaceAt';
 
 
 // Won't work if value is object.
@@ -14,7 +14,7 @@ export function replaceFirstOf(value, newValue, array): void {
 
 // Won't work if values contains object.
 
-export function replaceFirstOfEach(values: any[], newValues: any[], array) {
+export function replaceFirstOfEach(values: any[], newValues: any[], array): void {
 	let i = -1;
 	while (++i < values.length) {
 		replaceFirstOf(values[i], newValues[i], array);
