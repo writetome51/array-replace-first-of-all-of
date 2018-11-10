@@ -3,8 +3,8 @@ import { getFirstIndexOf } from '@writetome51/array-get-indexes-basic';
 import { ifIndexNotNegative_getActionResult }
 	from '@writetome51/array-and-index-validation/ifIndexNotNegative_getActionResult';
 import { replaceAt } from '@writetome51/array-replace-at';
-import { _doMultiReplace } from './privy/private_functions';
 import { arraysMatch } from '@writetome51/arrays-match';
+import { _doMultiReplace } from './privy/private_functions';
 
 
 // Won't work if value is object.
