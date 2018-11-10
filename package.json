@@ -2,10 +2,18 @@
   "name": "@writetome51/array-replace-first-of-all-of",
   "version": "1.0.0",
   "description": "array-handling functions that replace items",
-  "main": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/writetome51/array-replace-at.git"
+  },
+  "bugs": {
+    "url": "https://github.com/writetome51/array-replace-at/issues"
+  },
+  "homepage": "https://github.com/writetome51/array-replace-at#readme",
   "keywords": [
     "array",
     "manipulation",
@@ -20,7 +28,7 @@
   "dependencies": {
     "@writetome51/array-and-index-validation": "latest",
     "@writetome51/array-get-indexes-basic": "latest",
-    "@writetome51/array-analysis-basic": "latest",
+    "@writetome51/array-has": "latest",
     "@writetome51/array-replace-at": "latest"
   }
 }

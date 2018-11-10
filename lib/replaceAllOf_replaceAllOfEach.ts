@@ -1,4 +1,4 @@
-import { arrayHas } from '@writetome51/array-analysis-basic/arrayHas';
+import { arrayHas } from '@writetome51/arrayHas';
 import { replaceFirstOf } from './replaceFirstOf_replaceFirstOfEach';
 
 

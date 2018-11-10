@@ -1,4 +1,4 @@
-import { getFirstIndexOf } from '@writetome51/array-get-indexes-basic/getFirstIndexOf';
+import { getFirstIndexOf } from '@writetome51/array-get-indexes-basic';
 import { ifIndexNotNegative_getActionResult }
 	from '@writetome51/array-and-index-validation/ifIndexNotNegative_getActionResult';
 import { replaceAt } from '@writetome51/array-replace-at/replaceAt';
