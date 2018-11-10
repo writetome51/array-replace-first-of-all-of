@@ -24,8 +24,11 @@
   ],
   "author": "Steve Thompson",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "@writetome51/arrays-match": "^1.0.2"
+  },
   "dependencies": {
+    "basic-data-handling": "1.0.13",
     "error-if-not-populated-array": "^1.0.0",
     "@writetome51/array-and-index-validation": "latest",
     "@writetome51/array-get-indexes-basic": "latest",
