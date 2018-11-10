@@ -1,19 +1,19 @@
 {
   "name": "@writetome51/array-replace-first-of-all-of",
-  "version": "1.0.0",
-  "description": "array-handling functions that replace items",
+  "version": "1.1.0",
+  "description": "Functions that replace particular values found in array with new values",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/writetome51/array-replace-at.git"
+    "url": "git+https://github.com/writetome51/array-replace-first-of-all-of.git"
   },
   "bugs": {
-    "url": "https://github.com/writetome51/array-replace-at/issues"
+    "url": "https://github.com/writetome51/array-replace-first-of-all-of/issues"
   },
-  "homepage": "https://github.com/writetome51/array-replace-at#readme",
+  "homepage": "https://github.com/writetome51/array-replace-first-of-all-of#readme",
   "keywords": [
     "array",
     "manipulation",
@@ -26,6 +26,7 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
+    "error-if-not-populated-array": "^1.0.0",
     "@writetome51/array-and-index-validation": "latest",
     "@writetome51/array-get-indexes-basic": "latest",
     "@writetome51/array-has": "latest",
