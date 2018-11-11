@@ -10,12 +10,12 @@ import { _doMultiReplace } from './privy/private_functions';
 // Won't work if value is object.
 
 export function replaceFirstOf(value, newValue, array): void {
+	if ((isArray(value) && isArray(newValue) && arraysMatch(value, newValue)) ||
+		(value === newValue)) {
+		throw new Error('The value to replace and the new value are identical.  This is not allowed.');
+	}
 	let index = getFirstIndexOf(value, array);
 	ifIndexNotNegative_getActionResult(index, () => {
-		if ((isArray(value) && isArray(newValue) && arraysMatch(value, newValue)) ||
-			(value === newValue)) {
-			throw new Error('The value to replace and the new value are identical.  This is not allowed.');
-		}
 		replaceAt(index, newValue, array);
 	});
 }

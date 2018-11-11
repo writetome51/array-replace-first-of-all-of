@@ -105,11 +105,12 @@ if (errorTriggered) console.log('test 10A passed');
 else console.log('test 10A FAILED');
 
 
-// Test 11: should trigger error if oldvalue isn't found in the array:
+// Test 11: should trigger error if oldvalue and newvalue are identical even when oldvalue isn't found
+// in the array:
 arr = [1, 2, 3, 1, 2, 3, 1, 2, 3];
 errorTriggered = false;
 try {
-	replaceFirstOf(10, 1, arr);
+	replaceFirstOf(10, 10, arr);
 }
 catch (e) {
 	errorTriggered = true;

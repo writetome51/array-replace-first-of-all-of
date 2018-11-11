@@ -122,7 +122,7 @@ else console.log('test 10A FAILED');
 arr = [1, 2, 3, 1, 2, 3, 1, 2, 3];
 errorTriggered = false;
 try {
-	replaceAllOf(10, 1, arr);
+	replaceAllOf(10, 10, arr);
 }
 catch (e) {
 	errorTriggered = true;
