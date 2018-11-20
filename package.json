@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/array-replace-first-of-all-of",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Functions that replace particular values found in array with new values",
   "main": "index.js",
   "scripts": {
