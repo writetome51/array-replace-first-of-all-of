@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var replaceAllOf_replaceAllOfEach_1 = require("../replaceAllOf_replaceAllOfEach");
+var replaceAllOf_replaceAllOfEach_1 = require("../privy/replaceAllOf_replaceAllOfEach");
 var arrays_match_1 = require("@writetome51/arrays-match");
 var arr = [1, 2, 3, 1, 2, 3, 1, 2, 3, '1', '2', '3'];
 var arrCopy = arr;

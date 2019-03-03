@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var array_has_1 = require("@writetome51/array-has");
 var replaceFirstOf_replaceFirstOfEach_1 = require("./replaceFirstOf_replaceFirstOfEach");
-var private_functions_1 = require("./privy/private_functions");
+var private_functions_1 = require("./private_functions");
 // value cannot be object.
 function replaceAllOf(value, newValue, array) {
     while (array_has_1.arrayHas(value, array)) {

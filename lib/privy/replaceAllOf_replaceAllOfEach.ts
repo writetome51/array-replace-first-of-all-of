@@ -1,6 +1,6 @@
 import { arrayHas } from '@writetome51/array-has';
 import { replaceFirstOf } from './replaceFirstOf_replaceFirstOfEach';
-import { _doMultiReplace } from './privy/private_functions';
+import { _doMultiReplace } from './private_functions';
 
 
 // value cannot be object.
