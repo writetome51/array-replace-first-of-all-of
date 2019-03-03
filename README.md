@@ -22,6 +22,9 @@ Any parameter called `values` cannot contain an object.  It can contain arrays.
 You can, however, pass an object as a `newValue`, or have an object inside of  
 `newValues`.
 
+## Installation
+`npm i  @writetome51/array-replace-first-of-all-of`
+
 
 ## Examples
 ```
