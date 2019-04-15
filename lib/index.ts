@@ -1,2 +1,2 @@
-export { replaceFirstOf, replaceFirstOfEach } from './privy/replaceFirstOf_replaceFirstOfEach';
-export { replaceAllOf, replaceAllOfEach } from './privy/replaceAllOf_replaceAllOfEach';
+export { replaceFirstOf } from './privy/replaceFirstOf';
+export { replaceAllOf } from './privy/replaceAllOf';

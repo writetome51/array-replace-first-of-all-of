@@ -1,4 +1,4 @@
-import { replaceAllOf } from '../privy/replaceAllOf_replaceAllOfEach';
+import { replaceAllOf } from '../privy/replaceAllOf';
 import { arraysMatch } from '@writetome51/arrays-match';
 
 

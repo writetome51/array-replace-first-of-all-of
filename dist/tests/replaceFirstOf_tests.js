@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var replaceFirstOf_replaceFirstOfEach_1 = require("../privy/replaceFirstOf_replaceFirstOfEach");
+var replaceFirstOf_1 = require("../privy/replaceFirstOf");
 var arrays_match_1 = require("@writetome51/arrays-match");
 var arr = [1, 2, 3, 1, 2, 3, 1, 2, 3, '1', '2', '3'];
 var arrCopy = arr;
 // Test 1: make sure it works for numbers:
-replaceFirstOf_replaceFirstOfEach_1.replaceFirstOf(2, 20, arr);
+replaceFirstOf_1.replaceFirstOf(2, 20, arr);
 if (arrays_match_1.arraysMatch(arr, [1, 20, 3, 1, 2, 3, 1, 2, 3, '1', '2', '3']))
     console.log('test 1 passed');
 else
@@ -17,7 +17,7 @@ else
     console.log('test 1A FAILED');
 // Test 3: make sure it works for strings:
 arr = ['aa', 'a', 'aa', 'a', 'aa', 'a', 'aa', 'a', 10, 'aa', 1];
-replaceFirstOf_replaceFirstOfEach_1.replaceFirstOf('a', 'z', arr);
+replaceFirstOf_1.replaceFirstOf('a', 'z', arr);
 if (arrays_match_1.arraysMatch(arr, ['aa', 'z', 'aa', 'a', 'aa', 'a', 'aa', 'a', 10, 'aa', 1]))
     console.log('test 3 passed');
 else
@@ -25,7 +25,7 @@ else
 // Test 4: make sure it works for booleans:
 arr = [true, false, true, false, 1, 0, 1, undefined];
 arrCopy = arr;
-replaceFirstOf_replaceFirstOfEach_1.replaceFirstOf(false, 'no', arr);
+replaceFirstOf_1.replaceFirstOf(false, 'no', arr);
 if (arrays_match_1.arraysMatch(arr, [true, 'no', true, false, 1, 0, 1, undefined]))
     console.log('test 4 passed');
 else
@@ -33,7 +33,7 @@ else
 // Test 5: make sure it works for arrays:
 arr = ['bb', ['bb'], ['b'], 'bb', ['bb'], ['b'], 'bb'];
 arrCopy = arr;
-replaceFirstOf_replaceFirstOfEach_1.replaceFirstOf(['bb'], [], arr);
+replaceFirstOf_1.replaceFirstOf(['bb'], [], arr);
 if (arrays_match_1.arraysMatch(arr, ['bb', [], ['b'], 'bb', ['bb'], ['b'], 'bb']))
     console.log('test 5 passed');
 else
@@ -45,21 +45,21 @@ else
     console.log('test 5A FAILED');
 // Test 6:
 arr = ['', '0', '', '0', '', '0'];
-replaceFirstOf_replaceFirstOfEach_1.replaceFirstOf('', 0, arr);
+replaceFirstOf_1.replaceFirstOf('', 0, arr);
 if (arrays_match_1.arraysMatch(arr, [0, '0', '', '0', '', '0']))
     console.log('test 6 passed');
 else
     console.log('test 6 FAILED');
 // Test 7:
 arr = ['', 0, '', 0, '', 0];
-replaceFirstOf_replaceFirstOfEach_1.replaceFirstOf('', 1, arr);
+replaceFirstOf_1.replaceFirstOf('', 1, arr);
 if (arrays_match_1.arraysMatch(arr, [1, 0, '', 0, '', 0]))
     console.log('test 7 passed');
 else
     console.log('test 7 FAILED');
 // Test 8: make sure it's ok to replace items with objects:
 arr = ['bb', ['bb'], ['b'], 'bb', ['bb'], ['b'], 'bb'];
-replaceFirstOf_replaceFirstOfEach_1.replaceFirstOf(['b'], { prop1: 'b' }, arr);
+replaceFirstOf_1.replaceFirstOf(['b'], { prop1: 'b' }, arr);
 if (arr[2].prop1 && arr[2].prop1 === 'b')
     console.log('test 8 passed');
 else
@@ -67,7 +67,7 @@ else
 // Test 9: should trigger error if first arg is object:
 var errorTriggered = false;
 try {
-    replaceFirstOf_replaceFirstOfEach_1.replaceFirstOf({}, [], arr);
+    replaceFirstOf_1.replaceFirstOf({}, [], arr);
 }
 catch (e) {
     errorTriggered = true;
@@ -80,7 +80,7 @@ else
 arr = [1, 2, 3, 1, 2, 3, 1, 2, 3];
 errorTriggered = false;
 try {
-    replaceFirstOf_replaceFirstOfEach_1.replaceFirstOf(1, 1, arr);
+    replaceFirstOf_1.replaceFirstOf(1, 1, arr);
 }
 catch (e) {
     errorTriggered = true;
@@ -93,7 +93,7 @@ else
 arr = [[1], 2, 3, [1], 2, 3, [1], 2, 3];
 errorTriggered = false;
 try {
-    replaceFirstOf_replaceFirstOfEach_1.replaceFirstOf([1], [1], arr);
+    replaceFirstOf_1.replaceFirstOf([1], [1], arr);
 }
 catch (e) {
     errorTriggered = true;
@@ -107,7 +107,7 @@ else
 arr = [1, 2, 3, 1, 2, 3, 1, 2, 3];
 errorTriggered = false;
 try {
-    replaceFirstOf_replaceFirstOfEach_1.replaceFirstOf(10, 10, arr);
+    replaceFirstOf_1.replaceFirstOf(10, 10, arr);
 }
 catch (e) {
     errorTriggered = true;
@@ -120,7 +120,7 @@ else
 arr = [1, 2, 3, 1, 2, 3, 1, 2, 3];
 errorTriggered = false;
 try {
-    replaceFirstOf_replaceFirstOfEach_1.replaceFirstOf(10, 1, {});
+    replaceFirstOf_1.replaceFirstOf(10, 1, {});
 }
 catch (e) {
     errorTriggered = true;

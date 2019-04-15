@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var replaceAllOf_replaceAllOfEach_1 = require("../privy/replaceAllOf_replaceAllOfEach");
+var replaceAllOf_1 = require("../privy/replaceAllOf");
 var arrays_match_1 = require("@writetome51/arrays-match");
 var arr = [1, 2, 3, 1, 2, 3, 1, 2, 3, '1', '2', '3'];
 var arrCopy = arr;
 // Test 1: make sure it works for numbers:
-replaceAllOf_replaceAllOfEach_1.replaceAllOf(2, 20, arr);
+replaceAllOf_1.replaceAllOf(2, 20, arr);
 if (arrays_match_1.arraysMatch(arr, [1, 20, 3, 1, 20, 3, 1, 20, 3, '1', '2', '3']))
     console.log('test 1 passed');
 else
@@ -17,14 +17,14 @@ else
     console.log('test 1A FAILED');
 // Test 2: make sure function performs normally when there's only 1 instance of item to replace:
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-replaceAllOf_replaceAllOfEach_1.replaceAllOf(2, 20, arr);
+replaceAllOf_1.replaceAllOf(2, 20, arr);
 if (arrays_match_1.arraysMatch(arr, [1, 20, 3, 4, 5, 6, 7, 8, 9]))
     console.log('test 2 passed');
 else
     console.log('test 2 FAILED');
 // Test 3: make sure it works for strings:
 arr = ['aa', 'a', 'aa', 'a', 'aa', 'a', 'aa', 'a', 10, 'aa', 1];
-replaceAllOf_replaceAllOfEach_1.replaceAllOf('a', 'z', arr);
+replaceAllOf_1.replaceAllOf('a', 'z', arr);
 if (arrays_match_1.arraysMatch(arr, ['aa', 'z', 'aa', 'z', 'aa', 'z', 'aa', 'z', 10, 'aa', 1]))
     console.log('test 3 passed');
 else
@@ -32,7 +32,7 @@ else
 // Test 4: make sure it works for booleans:
 arr = [true, false, true, false, 1, 0, 1, undefined];
 arrCopy = arr;
-replaceAllOf_replaceAllOfEach_1.replaceAllOf(false, 'no', arr);
+replaceAllOf_1.replaceAllOf(false, 'no', arr);
 if (arrays_match_1.arraysMatch(arr, [true, 'no', true, 'no', 1, 0, 1, undefined]))
     console.log('test 4 passed');
 else
@@ -45,7 +45,7 @@ else
 // Test 5: make sure it works for arrays:
 arr = ['bb', ['bb'], ['b'], 'bb', ['bb'], ['b'], 'bb'];
 arrCopy = arr;
-replaceAllOf_replaceAllOfEach_1.replaceAllOf(['bb'], [], arr);
+replaceAllOf_1.replaceAllOf(['bb'], [], arr);
 if (arrays_match_1.arraysMatch(arr, ['bb', [], ['b'], 'bb', [], ['b'], 'bb']))
     console.log('test 5 passed');
 else
@@ -57,21 +57,21 @@ else
     console.log('test 5A FAILED');
 // Test 6:
 arr = ['', '0', '', '0', '', '0'];
-replaceAllOf_replaceAllOfEach_1.replaceAllOf('', 0, arr);
+replaceAllOf_1.replaceAllOf('', 0, arr);
 if (arrays_match_1.arraysMatch(arr, [0, '0', 0, '0', 0, '0']))
     console.log('test 6 passed');
 else
     console.log('test 6 FAILED');
 // Test 7:
 arr = ['', 0, '', 0, '', 0];
-replaceAllOf_replaceAllOfEach_1.replaceAllOf('', 1, arr);
+replaceAllOf_1.replaceAllOf('', 1, arr);
 if (arrays_match_1.arraysMatch(arr, [1, 0, 1, 0, 1, 0]))
     console.log('test 7 passed');
 else
     console.log('test 7 FAILED');
 // Test 8: make sure it's ok to replace items with objects:
 arr = ['bb', ['bb'], ['b'], 'bb', ['bb'], ['b'], 'bb'];
-replaceAllOf_replaceAllOfEach_1.replaceAllOf(['b'], { prop1: 'b' }, arr);
+replaceAllOf_1.replaceAllOf(['b'], { prop1: 'b' }, arr);
 if (arr[2].prop1 && arr[5].prop1 && arr[2].prop1 === 'b' && arr[5].prop1 === 'b')
     console.log('test 8 passed');
 else
@@ -79,7 +79,7 @@ else
 // Test 9: should trigger error if first arg is object:
 var errorTriggered = false;
 try {
-    replaceAllOf_replaceAllOfEach_1.replaceAllOf({}, [], arr);
+    replaceAllOf_1.replaceAllOf({}, [], arr);
 }
 catch (e) {
     errorTriggered = true;
@@ -92,7 +92,7 @@ else
 arr = [1, 2, 3, 1, 2, 3, 1, 2, 3];
 errorTriggered = false;
 try {
-    replaceAllOf_replaceAllOfEach_1.replaceAllOf(1, 1, arr);
+    replaceAllOf_1.replaceAllOf(1, 1, arr);
 }
 catch (e) {
     errorTriggered = true;
@@ -105,7 +105,7 @@ else
 arr = [[1], 2, 3, [1], 2, 3, [1], 2, 3];
 errorTriggered = false;
 try {
-    replaceAllOf_replaceAllOfEach_1.replaceAllOf([1], [1], arr);
+    replaceAllOf_1.replaceAllOf([1], [1], arr);
 }
 catch (e) {
     errorTriggered = true;
@@ -119,7 +119,7 @@ else
 arr = [1, 2, 3, 1, 2, 3, 1, 2, 3];
 errorTriggered = false;
 try {
-    replaceAllOf_replaceAllOfEach_1.replaceAllOf(10, 10, arr);
+    replaceAllOf_1.replaceAllOf(10, 10, arr);
 }
 catch (e) {
     errorTriggered = true;
